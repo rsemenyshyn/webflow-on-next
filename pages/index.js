@@ -16,6 +16,11 @@ function isUrlInternal(link){
 
 // Replaces DOM nodes with React components
 function replace(node){
+
+	if (node.attribs?.style?.indexOf('translate3d') >= 0) {
+		node.attribs.style = node.attribs.style.replace('opacity:0', 'opacity:1');
+	}
+
 	const attribs = node.attribs || {};
 	const { style, ...props } = attribs;
 
