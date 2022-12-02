@@ -5,6 +5,8 @@ import Link from 'next/link';
 import get from 'lodash/get';
 import parseHtml, { domToReact } from 'html-react-parser';
 
+import { renderComponent } from './renderComponent';
+
 // Determines if URL is internal or external
 function isUrlInternal(link){
 	return !(!link ||
@@ -63,7 +65,10 @@ function replace(node){
 			</form>
 		);
 	}
-
+	if (attribs['data-type']) {
+		// Replace static Node (Block) with react component (widget)
+		return renderComponent(node, parseOptions);
+	}
 }
 const parseOptions = { replace }
 
