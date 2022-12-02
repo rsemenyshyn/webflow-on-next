@@ -7,7 +7,7 @@ const Grid = (props) => {
 	const rows = props?.dataset?.rows ? parseInt(props?.dataset.rows) : 1;
 	const cols = props?.dataset?.cols ? parseInt(props?.dataset.cols) : 3;
 
-	const styleRow = { display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center' };
+	const styleRow = { display: 'flex', justifyContent: 'space-between', alignItems: 'center' };
 
 	return (
 		<div>
