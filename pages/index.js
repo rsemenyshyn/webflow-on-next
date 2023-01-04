@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import Script from 'next/script';
 
 import get from 'lodash/get';
 import parseHtml, { domToReact } from 'html-react-parser';
@@ -79,6 +80,7 @@ export default function Home(props) {
 				{parseHtml(props.headContent, parseOptions)}
 			</Head>
 			{parseHtml(props.bodyContent, parseOptions)}
+			<Script src={process.env.WEBFLOW_URL} strategy="afterInteractive"></Script>
 		</>
 	)
 }
