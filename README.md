@@ -15,6 +15,7 @@ Let us take [Leagent](leagent.com) as a good example of the widgets one can use 
 ###### Grid of properties
     <div data-type="grid" class="leagent-widget"
      data-address=""
+     data-sold=""
      data-page=""
      data-count=""
      data-row-sm=""
@@ -24,6 +25,7 @@ Let us take [Leagent](leagent.com) as a good example of the widgets one can use 
 ###### Carousel of properties
     <div data-type="carousel" class="leagent-widget"
      data-address=""
+     data-sold=""
      data-page=""
      data-count=""
      data-row-sm=""
